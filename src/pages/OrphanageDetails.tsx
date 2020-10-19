@@ -83,8 +83,8 @@ export default function OrphanageDetails() {
         <View style={styles.mapContainer}>
           <MapView
             initialRegion={{
-              latitude: -27.2092052,
-              longitude: -49.6401092,
+              latitude: -29.6880368,
+              longitude: -51.1491037,
               latitudeDelta: 0.008,
               longitudeDelta: 0.008,
             }}
@@ -97,8 +97,8 @@ export default function OrphanageDetails() {
             <Marker
               icon={mapMarker}
               coordinate={{
-                latitude: -27.2092052,
-                longitude: -49.6401092,
+                latitude: -29.6880368,
+                longitude: -51.1491037,
               }}
             />
           </MapView>
@@ -132,9 +132,9 @@ export default function OrphanageDetails() {
               </Text>
             </View>
           ) : (
-            <View style={[styles.scheduleItemRed, styles.scheduleItemGreen]}>
-              <Feather name="info" size={40} color="#39CC83" />
-              <Text style={[styles.scheduleTextRed, styles.scheduleTextGreen]}>
+            <View style={[styles.scheduleItemRed]}>
+              <Feather name="info" size={40} color="#FF669D" />
+              <Text style={styles.scheduleTextRed}>
                 Não atendemos fim de semana
               </Text>
             </View>
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
 
   title: {
     color: '#4D6F80',
-    fontSize: 30,
+    fontSize: 24,
     fontFamily: 'Nunito_700Bold',
   },
 
@@ -240,18 +240,23 @@ const styles = StyleSheet.create({
   },
 
   scheduleItemRed: {
-    backgroundColor: 'red',
+    backgroundColor: '#FFE4EE',
     borderWidth: 1,
     borderColor: '#A1E9C5',
     borderRadius: 20,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: '#FF669D',
   },
 
   scheduleTextRed: {
     fontFamily: 'Nunito_600SemiBold',
-    fontSize: 16,
+    fontSize: 12,
     lineHeight: 24,
     marginTop: 20,
-    color: 'red',
+    color: '#FF669D',
+    maxWidth: '82%',
   },
   scheduleText: {
     fontFamily: 'Nunito_600SemiBold',
